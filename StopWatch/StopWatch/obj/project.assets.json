@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\personal\\Mosh\\Stopwatch\\StopWatch\\StopWatch\\StopWatch.csproj",
-      "projectName": "StopWatch",
-      "projectPath": "C:\\dev\\personal\\Mosh\\Stopwatch\\StopWatch\\StopWatch\\StopWatch.csproj",
+      "projectUniqueName": "C:\\dev\\personal\\Mosh\\Stopwatch\\StopWatch\\StopWatch\\StopWatchProject.csproj",
+      "projectName": "StopWatchProject",
+      "projectPath": "C:\\dev\\personal\\Mosh\\Stopwatch\\StopWatch\\StopWatch\\StopWatchProject.csproj",
       "packagesPath": "C:\\Users\\owilliams\\.nuget\\packages\\",
       "outputPath": "C:\\dev\\personal\\Mosh\\Stopwatch\\StopWatch\\StopWatch\\obj\\",
       "projectStyle": "PackageReference",
