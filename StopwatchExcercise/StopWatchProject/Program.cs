@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("Type 'start' to start the stopwatch. Type 'quit' to close program");
         var input = Console.ReadLine();
 
-        while (!string.IsNullOrWhiteSpace(input) && input != "quit")
+        while (!string.IsNullOrEmpty(input) && input != "quit")
         {
 
             switch (input)
@@ -30,7 +30,6 @@ class Program
             input = Console.ReadLine();
 
         }
-
 
     }
 }
