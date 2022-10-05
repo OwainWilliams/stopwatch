@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StopWatch", "StopWatch\StopWatch.csproj", "{4A63658D-05E0-4CB5-A8A8-B02F8C13E71A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StopWatchProject", "StopWatchProject\StopWatchProject.csproj", "{4A63658D-05E0-4CB5-A8A8-B02F8C13E71A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
