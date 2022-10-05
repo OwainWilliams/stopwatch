@@ -5,32 +5,34 @@
     {
         private TimeOnly startedTime = new TimeOnly();
         private TimeOnly stoppedTime = new TimeOnly();
+        private bool timerStarted = false;
 
-        public void Start()
+        public string Start()
         {
-            Console.WriteLine("Stopwatch started. Type 'stop' to stop the stopwatch");
+            if (!timerStarted)
+            {
+                startedTime = TimeOnly.FromDateTime(DateTime.Now);
+                timerStarted = true;
 
-            startedTime = TimeOnly.FromDateTime(DateTime.Now);
-            Console.WriteLine(startedTime);
-            
-
+                return "Stopwatch started at : " + startedTime.ToString();
+            }
+            else
+            {
+                return "Stopwatch has already started";
+            }
         }
 
-        public void Stop()
+        public string Stop()
         {
-            Console.WriteLine();
-            Console.WriteLine("Stopwatch stopped");
             stoppedTime = TimeOnly.FromDateTime(DateTime.Now);
-
-            Console.WriteLine("Stopped at: " + stoppedTime);
-
-            Console.WriteLine(ElapsedTime() + " has passed between starting and stopping the stopwatch"); ;
+            timerStarted = false;
+            return "Stopwatch stopped";
         }
 
-        public TimeSpan ElapsedTime()
+        public string ElapsedTime()
         {
-            var elapsedTime = stoppedTime - startedTime;
-            return elapsedTime;
+            TimeSpan elapsedTime = stoppedTime - startedTime;
+            return "Stopwatch ran for : " + elapsedTime;
         }
     }
 }

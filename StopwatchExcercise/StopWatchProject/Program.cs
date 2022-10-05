@@ -1,40 +1,38 @@
 ﻿using StopWatchProgram;
 
-var stopwatch = new Stopwatch();
-Console.WriteLine("Type 'start' to start the stopwatch. Type 'quit' to close program");
-var input = Console.ReadLine();
-var watchStarted = false;
-
-
-while(input != null && input != "quit")
+class Program
 {
-    if (input != null && input.ToLower() == "start")
+    static void Main(string[] args)
     {
-        if (!watchStarted)
+        var stopwatch = new Stopwatch();
+        Console.WriteLine("Type 'start' to start the stopwatch. Type 'quit' to close program");
+        var input = Console.ReadLine();
+
+        while (!string.IsNullOrWhiteSpace(input) && input != "quit")
         {
-            watchStarted = true;
-            stopwatch.Start();
+
+            switch (input)
+            {
+                case "quit":
+                    break;
+                case "start":
+                    Console.WriteLine(stopwatch.Start());
+                    break;
+                case "stop":
+                    Console.WriteLine(stopwatch.Stop());
+                    Console.WriteLine(stopwatch.ElapsedTime());
+                    break;
+                default:
+                    Console.WriteLine("Invalid command");
+                    break;
+            }
+
             input = Console.ReadLine();
-        }
-        else
-        {
-            Console.WriteLine("Stopwatch has already been started");
-            input = Console.ReadLine(); 
+
         }
 
-    } else if( input != null && input.ToLower() == "stop")
-    {
-        watchStarted = false;
-        stopwatch.Stop();  
-        input = Console.ReadLine();
+
     }
-    else
-    {
-        Console.WriteLine("Command not recognised");
-        input = Console.ReadLine();
-    }
-
-
-
-
 }
+
+
