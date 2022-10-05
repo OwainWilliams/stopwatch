@@ -1,22 +1,30 @@
 ﻿namespace StopWatchProgram
 {
+
     public class Stopwatch
     {
         private TimeOnly startedTime = new TimeOnly();
         private TimeOnly stoppedTime = new TimeOnly();
 
-        public TimeOnly Start()
+        public void Start()
         {
+            Console.WriteLine("Stopwatch started. Type 'stop' to stop the stopwatch");
+
             startedTime = TimeOnly.FromDateTime(DateTime.Now);
-            return startedTime;
+            Console.WriteLine(startedTime);
+            
 
         }
 
-        public TimeOnly Stop()
+        public void Stop()
         {
+            Console.WriteLine();
+            Console.WriteLine("Stopwatch stopped");
             stoppedTime = TimeOnly.FromDateTime(DateTime.Now);
-            return stoppedTime;
-            
+
+            Console.WriteLine("Stopped at: " + stoppedTime);
+
+            Console.WriteLine(ElapsedTime() + " has passed between starting and stopping the stopwatch"); ;
         }
 
         public TimeSpan ElapsedTime()

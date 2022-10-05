@@ -12,11 +12,9 @@ while(input != null && input != "quit")
     {
         if (!watchStarted)
         {
-            Console.WriteLine("Stopwatch started. Type 'stop' to stop the stopwatch");
             watchStarted = true;
-            Console.WriteLine("Started at: " + stopwatch.Start());
+            stopwatch.Start();
             input = Console.ReadLine();
-
         }
         else
         {
@@ -24,15 +22,15 @@ while(input != null && input != "quit")
             input = Console.ReadLine(); 
         }
 
-    }
-    if( input != null && input.ToLower() == "stop")
+    } else if( input != null && input.ToLower() == "stop")
     {
-        
-        Console.WriteLine();
-        Console.WriteLine("Stopwatch stopped");
         watchStarted = false;
-        Console.WriteLine("Stopped at: " + stopwatch.Stop());
-        Console.WriteLine(stopwatch.ElapsedTime() + " has passed between starting and stopping the stopwatch");
+        stopwatch.Stop();  
+        input = Console.ReadLine();
+    }
+    else
+    {
+        Console.WriteLine("Command not recognised");
         input = Console.ReadLine();
     }
 
