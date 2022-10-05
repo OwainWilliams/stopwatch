@@ -12,3 +12,5 @@ We should also be able to use a stopwatch multiple times. So we may start and st
 start and stop it again. Make sure the duration value each time is calculated properly. 
 We should not be able to start a stopwatch twice in a row (because that may overwrite the initial 
 start time). So the class should throw an InvalidOperationException if its started twice. 
+
+*Note* - Instead of an InvalidOperationException I've added some extra functionality. 
